@@ -1,0 +1,4 @@
+publish_book.sh
+build_pdf.sh
+build_book.sh
+build_toc.sh
