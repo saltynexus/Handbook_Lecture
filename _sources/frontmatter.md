@@ -1,4 +1,6 @@
-# Welcome to your Jupyter Book
+# Lecture - Handbook of Ocean Wave Energy
+
+September 1, 2024
 
 This is a small sample book to give you a feel for how book content is
 structured.
@@ -7,5 +9,4 @@ It does not go in-depth into any particular topic - check out [the Jupyter Book 
 
 Check out the content pages bundled with this sample book to see more.
 
-```{tableofcontents}
-```
+I've provided a copy here of the open access {download}`book</downloads/Handbook_of_Ocean_Wave_Energy.pdf>` published by Springer ([source](https://link.springer.com/book/10.1007/978-3-319-39889-1)) for your convenience. A PDF copy of this presentation can also be {download}`downloaded</downloads/2024_Heitmann_Handbook_Lecture.pdf>` free of charge for you to view offline.
