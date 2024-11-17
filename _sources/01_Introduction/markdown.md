@@ -1,37 +1,68 @@
-# Markdown Files
+# Chapter 1: Introduction
+* Ocean wave energy as a sustainable energy source.
+* Benefits to society: reducing fossil fuel reliance, increasing energy diversity.
+* Offshore energy production reduces land usage and visual impact.
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
-This is a simple file to help you get started and show off some syntax.
+## The Role of Wave Energy in the Renewable Mix
+* Wave energy contributes to increasing renewable energy diversity.
+* Enhances national energy self-sufficiency and reduces reliance on imports.
+* Creation of new sectors for innovation and employment.
 
-## What is MyST?
 
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
+## The Concept of a Successful Product Innovation
+* Innovation needs technical feasibility, economic viability, and desirability.
+* Wave energy development depends on these factors aligning harmoniously.
+* Public grants and market incentives drive wave energy technology development.
 
-For more about MyST, see [the MyST Markdown Overview](https://jupyterbook.org/content/myst.html).
+## Overview of Wave Energy Technologies
+* Over 250 wave energy developers globally.
+* Main categories of wave energy converters (WECs) such as oscillating water columns, point absorbers, and overtopping devices.
+* Technology development is active, but commercialization is still challenging.
 
-## Sample Roles and Directives
+## Business Potential of Wave Energy
+* High costs of WEC development due to harsh offshore conditions.
+* Need for economic viability through reduced CapEx/OpEx and proven power production.
+* Importance of a strong track record for attracting investors.
 
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
+## Components of a Wave Energy Converter (WEC)
+* Hydrodynamic subsystem: absorbs wave energy.
+* Power Take-Off (PTO) subsystem: converts wave energy into electricity.
+* Reaction subsystem: anchors WEC and supports other subsystems.
+* Control subsystem: automates and monitors the WEC.
 
-Here is a "note" directive:
+## Metocean Parameters Affecting WECs
+* Environmental factors: wave motion, depth, seabed composition, and tidal currents.
+* Importance of understanding local conditions for effective WEC deployment.
 
-```{note}
-Here is a note
-```
+## Key Challenges: Survivability and Reliability
+* WEC survivability in extreme ocean conditions.
+* Maintenance and reliability challenges in offshore environments.
+* Importance of designing systems that minimize downtime and are easy to maintain on-site.
 
-It will be rendered in a special box when you build your book.
+## Economic Viability of WECs
+* The need for WECs to scale to multi-MW devices for cost-efficiency.
+* Smaller WECs are not as viable in the long-term without technological advances.
+* CapEx, OpEx, and feed-in tariffs influence economic success.
 
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
+## Optimal Locations for WEC Deployment
+* Key factors: wave energy content, wave steepness, proximity to infrastructure.
+* Examples of optimal regions: Southern Hemisphere, North Atlantic.
+* Location influences economic and technical performance of WECs.
+
+## Power Take-Off Systems
+* Different PTO systems (hydraulic, mechanical, direct drive).
+* PTO efficiency is crucial for overall system performance.
+* Advanced control strategies can enhance power production but increase system wear.
+
+## Future Outlook
+* Wave energy has a strong potential as part of the future renewable energy mix.
+* Ongoing technological improvements needed to reduce costs and increase reliability.
+* Opportunities for innovation in scaling, durability, and maintenance.
+
+## Summary and Conclusions
+* Ocean wave energy has significant long-term potential.
+* Success depends on innovation, economic viability, and optimal deployment.
+* WEC technology continues to evolve, with many challenges ahead.
 
 
 ## Citations
@@ -49,7 +80,3 @@ then the bibliography is inserted with:
 ```{bibliography}
 ```
 
-## Learn more
-
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
