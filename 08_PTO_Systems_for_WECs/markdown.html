@@ -378,8 +378,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-pto-in-wave-energy">Importance of PTO in Wave Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-pto-system-design">Challenges in PTO System Design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-pto-systems-overview">Types of PTO Systems Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#air-turbines">Air Turbines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydraulic-pto-systems">Hydraulic PTO Systems</a></li>
@@ -387,8 +386,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-mechanical-drive-systems">Direct Mechanical Drive Systems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-electrical-drive-systems">Direct Electrical Drive Systems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-strategies-for-pto-systems">Control Strategies for PTO Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latching-and-reactive-control">Latching and Reactive Control</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-offs-in-pto-control">Trade-offs in PTO Control</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-conclusions">Summary and Conclusions</a></li>
 </ul>
             </nav>
@@ -403,101 +400,296 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-8-power-take-off-systems-for-wecs">
 <h1>Chapter 8: Power Take-Off Systems for WECs<a class="headerlink" href="#chapter-8-power-take-off-systems-for-wecs" title="Link to this heading">#</a></h1>
+<p>Let’s start with some (informal) definitions…</p>
 <ul class="simple">
-<li><p>Power Take-Off (PTO) systems convert absorbed wave energy into usable electricity.</p></li>
-<li><p>PTO systems impact the efficiency, cost, and structural dynamics of WECs.</p></li>
-<li><p>Designing efficient PTO systems is a major challenge due to variability in wave energy and harsh marine environments.</p></li>
+<li><p>Power Take-Off…<strong>PTO</strong>…you’ll see it a lot</p>
+<ul>
+<li><p>convert absorbed wave energy</p></li>
+<li><p>when referring to the PTO, it’s important to understand the end product (e.g. mechanical or electrical)</p></li>
 </ul>
-<section id="importance-of-pto-in-wave-energy">
-<h2>Importance of PTO in Wave Energy<a class="headerlink" href="#importance-of-pto-in-wave-energy" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>PTO efficiency directly affects the Levelized Cost of Energy (LCoE).</p></li>
-<li><p>PTO systems represent 20-30% of the capital costs of a WEC.</p></li>
-<li><p>Reliability and maintenance requirements of PTO systems significantly influence operational costs.</p></li>
+</li>
+<li><p>Energy - capacity to do work (fundamental)…comes in many forms (kinetic, potential, etc.)</p></li>
+<li><p>Work - amount of energy transferred when a force acts on an object over a distance</p></li>
+<li><p>Power - rate at which energy is transferred. In other words the rate at which the work is done</p></li>
 </ul>
-</section>
-<section id="challenges-in-pto-system-design">
-<h2>Challenges in PTO System Design<a class="headerlink" href="#challenges-in-pto-system-design" title="Link to this heading">#</a></h2>
+<p>A simple mechanical model for a WEC…</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/oscillator.png"><img alt="../_images/oscillator.png" src="../_images/oscillator.png" style="width: 224.0px; height: 148.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Damped oscillator</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>From an engineering perspective, the study of WEC systems largely involves the study of vibrations and control theory with depth in hydrodynamics and mechanics. This is why the research is largely carried out by ocean and mechanical engineers. That being said, there are many facets to WEC systems, in which engineering is only one of them.</p>
 <ul class="simple">
-<li><p>Ocean waves present high variability in terms of displacement, forces, and accelerations.</p></li>
-<li><p>PTO systems must efficiently handle both extreme and calm wave conditions.</p></li>
-<li><p>Robustness and low maintenance are critical due to the difficulty of accessing offshore devices.</p></li>
+<li><p>General force concepts you need to know…</p>
+<ol class="arabic simple">
+<li><p>inertia</p></li>
+<li><p>damping</p></li>
+<li><p>restoring</p></li>
+<li><p>excitation</p></li>
+</ol>
+</li>
+<li><p>Of these, damping is of the form which gives absorption</p>
+<ul>
+<li><p>What happens if there is no damping?</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/damping.png"><img alt="../_images/damping.png" src="../_images/damping.png" style="width: 477.6px; height: 345.6px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Different forms of damping</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Start with the big picture…how do we get from A to B?</p>
+<ul class="simple">
+<li><p>“wave-to-wire” -&gt; there is a constant flow/transfer of energy</p>
+<ul>
+<li><p>waves power is captured/manipulated by device geometry</p>
+<ul>
+<li><p>e.g. wave force acting on a body causes it to move</p></li>
+</ul>
+</li>
+<li><p>mechanical-mechanical conversion</p>
+<ul>
+<li><p>e.g. linear body motion converted to shaft rotation</p></li>
+</ul>
+</li>
+<li><p>mechanical-electrical conversion</p>
+<ul>
+<li><p>e.g. rotary generator</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PTO systems impact the efficiency, cost, and structural dynamics of WECs.</p>
+<ul>
+<li><p>Directly affects the LCOE</p></li>
+<li><p>Represent 20-30% of the CapEx</p></li>
+<li><p>Reliability and maintenance (OpEx)</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/lcoe_factors.png"><img alt="../_images/lcoe_factors.png" src="../_images/lcoe_factors.png" style="width: 674.4000000000001px; height: 311.20000000000005px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Different forms of damping</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Designing efficient PTO systems is a major challenge <strong>due to variability in wave energy and harsh marine environments</strong>.</p>
+<ul>
+<li><p>True for any ocean system…look at wave spectrum</p></li>
+<li><p>Unconventional goal…resonance is a good thing</p></li>
+<li><p>Impedance</p></li>
+</ul>
+</li>
+<li><p>PTO is where most research is focused today</p>
+<ul>
+<li><p>Efficiency vs Cost</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="types-of-pto-systems-overview">
 <h2>Types of PTO Systems Overview<a class="headerlink" href="#types-of-pto-systems-overview" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Several types of PTO systems have been developed, each suited to different WEC configurations.</p></li>
-<li><p>Main categories include air turbines, hydraulic systems, hydro turbines, direct mechanical drives, and direct electrical drives.</p></li>
+<li><p>PTOs just as diverse as WEC bodies</p></li>
+<li><p>Main categories include</p>
+<ul>
+<li><p>air turbines</p></li>
+<li><p>hydraulic systems</p></li>
+<li><p>hydro turbines</p></li>
+<li><p>direct mechanical drives</p></li>
+<li><p>direct electrical drives</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/pto_types.png"><img alt="../_images/pto_types.png" src="../_images/pto_types.png" style="width: 772.8000000000001px; height: 535.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Different types of PTO systems</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Others not mentioned include advanced materials and/or properties</p>
+<ul>
+<li><p>Electroactive polymers</p></li>
+<li><p>Triboelectric</p></li>
+<li><p>Piezoelectric</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="air-turbines">
 <h2>Air Turbines<a class="headerlink" href="#air-turbines" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Air turbines are used primarily in Oscillating Water Column (OWC) devices.</p></li>
-<li><p>Examples of self-rectifying air turbines include Wells, Impulse, and Denniss-Auld turbines.</p></li>
-<li><p>Wells turbines are simple but not self-starting; Impulse turbines are more efficient but require more maintenance.</p></li>
+<li><p>Air turbines are used primarily in Oscillating Water Column (OWC) devices.</p>
+<ul>
+<li><p>Examples of self-rectifying air turbines include Wells, Impulse, and Denniss-Auld turbines.</p>
+<ul>
+<li><p>Wells turbines are simple but not self-starting</p></li>
+<li><p>Impulse turbines are more efficient but require more maintenance</p></li>
 </ul>
+</li>
+<li><p>Reaction type - lift</p></li>
+<li><p>Floating and fixed bottom</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/air_turbine.png"><img alt="../_images/air_turbine.png" src="../_images/air_turbine.png" style="width: 506.40000000000003px; height: 390.40000000000003px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Schematic of air turbine concept</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The video clip below showcases the Halona PTO bench test apparatus at the University of Hawaii at Manoa. The large piston emulates the free surface in the air chamber, oscillating back and forth to drive an impulse turbine.
+<video controls muted="true" loop="true" width="600" style="display: block; margin: 0 auto;">
+<source src="../_static/videos/Halona_bench.mp4" type="video/mp4">
+</video></p>
 </section>
 <section id="hydraulic-pto-systems">
 <h2>Hydraulic PTO Systems<a class="headerlink" href="#hydraulic-pto-systems" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Common in point absorbers and attenuators.</p></li>
-<li><p>Hydraulic systems translate mechanical energy into fluid motion, which then drives a hydraulic motor connected to an electrical generator.</p></li>
-<li><p>Hydraulic systems are well-suited for handling high loads at low speeds but are complex and prone to maintenance issues.</p></li>
+<li><p>Common in point absorbers and attenuators</p>
+<ul>
+<li><p>Linear vs rotational</p></li>
 </ul>
+</li>
+<li><p>Translate mechanical energy into fluid motion</p>
+<ul>
+<li><p>Drives a hydraulic motor connected to an electrical generator</p></li>
+</ul>
+</li>
+<li><p>Well-suited for handling high loads at low speeds</p></li>
+<li><p>Complex and prone to maintenance issues</p></li>
+</ul>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/hydraulic_system.png"><img alt="../_images/hydraulic_system.png" src="../_images/hydraulic_system.png" style="width: 663.2px; height: 429.6px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Schematic of hydraulic PTO</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="hydro-turbines">
 <h2>Hydro Turbines<a class="headerlink" href="#hydro-turbines" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Used in overtopping devices where water is accumulated in basins and released through turbines.</p></li>
-<li><p>Kaplan turbines are commonly used in overtopping WECs.</p></li>
-<li><p>Hydro turbines are mature and highly efficient, with efficiencies exceeding 90%, but require a sufficient head of water to be economical.</p></li>
+<li><p>Similar to use of hydraulic motor, but different working principle</p>
+<ul>
+<li><p>Impulse vs Reaction</p></li>
 </ul>
+</li>
+<li><p>Mature and highly efficient, with efficiencies exceeding 90%</p>
+<ul>
+<li><p>Head vs flow</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/head_flow.png"><img alt="../_images/head_flow.png" src="../_images/head_flow.png" style="width: 406.0px; height: 367.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Turbine designs for various flow regimes</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../_images/wave_dragon1.png"><img alt="../_images/wave_dragon1.png" src="../_images/wave_dragon1.png" style="width: 598.0px; height: 226.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">Kaplan turbine application in Wave Dragon</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The video clip below showcases the HAWSEC PTO bench test apparatus at the University of Hawaii at Manoa. An electric actuator oscillates back and forth to drive a closed circuit hydraulic system connected to a Pelton turbine.
+<video controls muted="true" loop="true" width="600" style="display: block; margin: 0 auto;">
+<source src="../_static/videos/HAWSEC_bench.mp4" type="video/mp4">
+</video></p>
 </section>
 <section id="direct-mechanical-drive-systems">
 <h2>Direct Mechanical Drive Systems<a class="headerlink" href="#direct-mechanical-drive-systems" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Mechanical systems directly couple the motion of a WEC to an electrical generator.</p></li>
-<li><p>Fewer energy conversions mean higher efficiency, but these systems undergo significant wear due to repeated load cycles.</p></li>
-<li><p>Examples include systems with pulleys, cables, and gearboxes.</p></li>
+<li><p>Mechanical systems directly couple the motion of a WEC to an electrical generator</p></li>
+<li><p>Examples include systems with pulleys, cables, and gearboxes</p></li>
+<li><p>Fewer energy conversions mean higher efficiency</p></li>
+<li><p>Significant wear due to repeated load cycles</p>
+<ul>
+<li><p>Needs more proof of concept…remember, waves different than wind</p></li>
 </ul>
+</li>
+</ul>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../_images/direct_mechanical.png"><img alt="../_images/direct_mechanical.png" src="../_images/direct_mechanical.png" style="width: 613.0px; height: 313.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Direct mechanical drive</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="direct-electrical-drive-systems">
 <h2>Direct Electrical Drive Systems<a class="headerlink" href="#direct-electrical-drive-systems" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Direct electrical drive systems use linear generators where the WEC motion directly produces electricity.</p></li>
-<li><p>Permanent magnets and power electronics have made this approach more feasible.</p></li>
+<li><p>Similar to “Direct Mechanical Drive Systems” but no intermediate mechanical transfer</p></li>
+<li><p>Mostly developed in the field of power electronics</p>
+<ul>
+<li><p>All conversions and smoothing done electrically</p></li>
+</ul>
+</li>
 <li><p>Challenges include designing the structure to maintain fine tolerances between moving components.</p></li>
 </ul>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../_images/direct_electrical.png"><img alt="../_images/direct_electrical.png" src="../_images/direct_electrical.png" style="width: 497.0px; height: 427.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Direct electrical drive</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="control-strategies-for-pto-systems">
 <h2>Control Strategies for PTO Systems<a class="headerlink" href="#control-strategies-for-pto-systems" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Control is critical to optimize energy capture across a wide range of wave conditions.</p></li>
-<li><p>Passive control: adjusting damping for current sea state conditions.</p></li>
-<li><p>Active control: strategies like latching, which synchronizes WEC motion with incoming waves for maximum energy absorption.</p></li>
+<li><p>Although designed to overlap with the wave spectrum, the device response spectrum is not a perfect overlap</p>
+<ul>
+<li><p>Can target average, but spectrum itself is dynamic</p>
+<ul>
+<li><p>Timescales?</p></li>
 </ul>
-</section>
-<section id="latching-and-reactive-control">
-<h2>Latching and Reactive Control<a class="headerlink" href="#latching-and-reactive-control" title="Link to this heading">#</a></h2>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../_images/wave_spectrum.png"><img alt="../_images/wave_spectrum.png" src="../_images/wave_spectrum.png" style="width: 625.0px; height: 351.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Spectra comparison</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Control strategies can be implemented to manipulate the response</p>
+<ul>
+<li><p>Recall the forces…inertia and restoring</p></li>
+<li><p>Damping coefficient (F/V)</p></li>
+<li><p>What’s the trade off here?</p></li>
+<li><p>Passive vs Active</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id12">
+<a class="reference internal image-reference" href="../_images/damping_coeff.png"><img alt="../_images/damping_coeff.png" src="../_images/damping_coeff.png" style="width: 633.0px; height: 493.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Examples of different damping coefficients.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>Latching Control: Holds the WEC in place during zero velocity and releases it to maximize energy absorption.</p></li>
 <li><p>Reactive Control: Actively adjusts the system’s stiffness and damping to respond to wave frequencies.</p></li>
 <li><p>Both strategies require advanced prediction algorithms and responsive PTO systems.</p></li>
 </ul>
 </section>
-<section id="trade-offs-in-pto-control">
-<h2>Trade-offs in PTO Control<a class="headerlink" href="#trade-offs-in-pto-control" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>More advanced control strategies can improve efficiency but increase system complexity and maintenance needs.</p></li>
-<li><p>Finding the balance between control strategy, cost, and reliability is essential for cost-effective wave energy conversion.</p></li>
-</ul>
-</section>
 <section id="summary-and-conclusions">
 <h2>Summary and Conclusions<a class="headerlink" href="#summary-and-conclusions" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>PTO systems are a critical element in the success of WECs.</p></li>
+<li><p>PTO systems are a critical element in the success of WECs.</p>
+<ul>
+<li><p>Need to understand the trade offs</p></li>
+</ul>
+</li>
 <li><p>The choice of PTO system affects efficiency, cost, and reliability, directly influencing the economic viability of wave energy.</p></li>
 <li><p>Continued research and development in PTO systems and control strategies are needed to lower costs and improve performance.</p></li>
 </ul>
@@ -569,8 +761,7 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-pto-in-wave-energy">Importance of PTO in Wave Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-pto-system-design">Challenges in PTO System Design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-pto-systems-overview">Types of PTO Systems Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#air-turbines">Air Turbines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydraulic-pto-systems">Hydraulic PTO Systems</a></li>
@@ -578,8 +769,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-mechanical-drive-systems">Direct Mechanical Drive Systems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direct-electrical-drive-systems">Direct Electrical Drive Systems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-strategies-for-pto-systems">Control Strategies for PTO Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latching-and-reactive-control">Latching and Reactive Control</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-offs-in-pto-control">Trade-offs in PTO Control</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-conclusions">Summary and Conclusions</a></li>
 </ul>
   </nav></div>

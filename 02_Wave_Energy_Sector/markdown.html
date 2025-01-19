@@ -60,6 +60,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '02_Wave_Energy_Sector/markdown';</script>
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -378,20 +380,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addressing-environmental-and-economic-concerns">Addressing Environmental and Economic Concerns</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-future-of-energy-systems">The Future of Energy Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-global-potential-of-wave-energy">The Global Potential of Wave Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-and-regional-estimates-of-wave-energy-potential">Global and Regional Estimates of Wave Energy Potential</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-development-of-wave-energy-converters-wecs">Historical Development of Wave Energy Converters (WECs)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-wave-energy-converters">Types of Wave Energy Converters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#locations-of-wec-deployment">Locations of WEC Deployment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-take-off-pto-systems-in-wecs">Power Take-Off (PTO) Systems in WECs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-various-wec-types">Examples of Various WEC Types</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-body-wec-systems">Multi-body WEC Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overtopping-wecs">Overtopping WECs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-and-development-of-wec-prototypes">Testing and Development of WEC Prototypes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-prospects-for-wave-energy">Future Prospects for Wave Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-conclusions">Summary and Conclusions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-future-outlook-and-conclusions">Summary, Future Outlook, and Conclusions</a></li>
 </ul>
             </nav>
         </div>
@@ -406,121 +400,319 @@
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-the-wave-energy-sector">
 <h1>Chapter 2: The Wave Energy Sector<a class="headerlink" href="#chapter-2-the-wave-energy-sector" title="Link to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Overview of renewable energy’s importance.</p></li>
-<li><p>Key motivations: environmental impact, fossil fuel depletion, energy security, and job creation.</p></li>
-<li><p>Wave energy is one of several forms of renewable energy, contributing to a diversified energy mix.</p></li>
+<li><p>Sparse at best in Hawaii, but high potential to adapt</p>
+<ul>
+<li><p>Ship yards</p></li>
+<li><p>Marine construction</p></li>
+<li><p>Environmental permitting and planning</p></li>
+<li><p>Universities</p></li>
 </ul>
-<section id="addressing-environmental-and-economic-concerns">
-<h2>Addressing Environmental and Economic Concerns<a class="headerlink" href="#addressing-environmental-and-economic-concerns" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Climate change mitigation through reduced CO2 emissions.</p></li>
-<li><p>The depletion of fossil fuels as a pressing global issue.</p></li>
-<li><p>The uneven distribution of fossil fuels leads to geopolitical conflicts—wave energy offers localized solutions.</p></li>
+</li>
+<li><p>Demand is there: <a class="reference external" href="https://energy.hawaii.gov/hawaii-clean-energy-initiative/">Hawai‘i CLEAN ENERGY INITIATIVE</a></p>
+<ul>
+<li><p>“In 2023, Governor Josh Green, M.D. renewed Hawai‘i’s commitment to achieve the nation’s first-ever 100 percent renewable portfolio standards (RPS) by the year 2045.”</p></li>
 </ul>
-</section>
-<section id="the-future-of-energy-systems">
-<h2>The Future of Energy Systems<a class="headerlink" href="#the-future-of-energy-systems" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Case example: Denmark’s goal of being fossil fuel-independent by 2050.</p></li>
-<li><p>Importance of political support and R&amp;D in reducing costs for renewable technologies like wave energy.</p></li>
-<li><p>Wave energy’s role in the future renewable energy mix, alongside wind, solar, and others.</p></li>
+</li>
 </ul>
-</section>
-<section id="the-global-potential-of-wave-energy">
-<h2>The Global Potential of Wave Energy<a class="headerlink" href="#the-global-potential-of-wave-energy" title="Link to this heading">#</a></h2>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Wave energy as a vast resource: 3.7 TW theoretical global resource.</p></li>
-<li><p>Waves generated by wind over the ocean travel long distances with minimal energy loss.</p></li>
-<li><p>Regional variations: Europe’s Atlantic coast has much higher wave power levels compared to areas like Denmark.</p></li>
+<li><p>Why wave energy and why now?</p>
+<ul>
+<li><p>environmental impact: climate change</p></li>
+<li><p>fossil fuel depletion</p>
+<ul>
+<li><p>what does this mean for the price of oil?</p></li>
+</ul>
+</li>
+<li><p>energy security</p></li>
+<li><p>energy diversity</p></li>
+<li><p>LOCAL job creation</p>
+<ul>
+<li><p>Saw the potential…inter-island export?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>What are the local social issues?</p></li>
+<li><p>What does a solution look like for Hawaii?</p>
+<ul>
+<li><p>CSI-WECs</p></li>
+<li><p>Co-design</p></li>
+</ul>
+</li>
+<li><p>Most of money is spent on materials and workmanship as opposed to handling the fuel</p></li>
+<li><p>Recall the challenge…techno-economic feasibility leaves wave energy still in R&amp;D phase</p>
+<ul>
+<li><p>Focus on optimization of structures, operations, controls, etc.</p></li>
+<li><p>Still heavily dependent on political support.</p></li>
+</ul>
+</li>
+<li><p>LCOE margin is less for island communities…</p>
+<ul>
+<li><p>Hawaii has two options: 1) wait and buy or 2) build</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="global-and-regional-estimates-of-wave-energy-potential">
 <h2>Global and Regional Estimates of Wave Energy Potential<a class="headerlink" href="#global-and-regional-estimates-of-wave-energy-potential" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Maps of global wave energy potential.</p></li>
-<li><p>Recoverable wave energy estimated to be about two-thirds of global electricity consumption.</p></li>
-<li><p>Significant potential for wave energy in Europe, especially the UK and northern coasts.</p></li>
+<li><p>What waves are we talking about?</p>
+<ul>
+<li><p>“sea states”</p></li>
+<li><p>wave climate</p></li>
 </ul>
+</li>
+<li><p>Wave energy as a vast resource…</p>
+<ul>
+<li><p>about 3.5 TW global resource (theoretical)</p>
+<ul>
+<li><p>extrapolating studies suggests 2/3 can be recovered</p></li>
+</ul>
+</li>
+<li><p>global average electrical power consumption in 2008: about 2 TW</p></li>
+<li><p>key takeaway: wave energy alone has potential to meet global demand</p>
+<ul>
+<li><p>realistically, it has the potential to diversify the portfolio (recap importance)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/global_power.png"><img alt="../_images/global_power.png" src="../_images/global_power.png" style="width: 850.4000000000001px; height: 400.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Annual gross wave power (theoretical)</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>We can see the hot spots in the figure above</p>
+<ul>
+<li><p>Northern and Southern oceans</p></li>
+<li><p>West coasts (land perspective)</p>
+<ul>
+<li><p>animation from Chapter 1 should have given clue why</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Recent 32-year hindcast for Hawaii <a class="reference external" href="https://tethys-engineering.pnnl.gov/publications/high-resolution-regional-wave-hindcast-hawaii">Medina et. al., 2019 PNNL-29370</a></p>
+<ul>
+<li><p>Recall metric: max-to-mean</p></li>
+<li><p>Take look at spatial distributions…</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/hawaii_power.png"><img alt="../_images/hawaii_power.png" src="../_images/hawaii_power.png" style="width: 639.6px; height: 416.4px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Annual</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/hawaii_power_january.png"><img alt="../_images/hawaii_power_january.png" src="../_images/hawaii_power_january.png" style="width: 486.40000000000003px; height: 320.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">January</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Observations</p>
+<ul>
+<li><p>Annual averages appear to be on par with previous studies</p></li>
+<li><p>Northern coasts experience greatest power</p>
+<ul>
+<li><p>Look at example…</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\text{Deep Water Wave Power} = \frac{\rho g^2}{64\pi}H^2 T
+\]</div>
+<p>For the sake of argument, assume a wave height of 10ft with a period of 15s in deep water. Plugging in the values gives a wave power of about 735kW/m (nearly 1MW/m), which is off the chart in the figure above.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/perspective.png"><img alt="../_images/perspective.png" src="../_images/perspective.png" style="width: 937.6px; height: 456.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Wave power in perspective.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Obviously this is a big wave, but it’s not unheard of on the North Shore. On Jan 6th 2024, the <a class="reference external" href="https://cdip.ucsd.edu/m/products/?stn=106p1">Waimea buoy</a> recorded a <strong>significant</strong> wave height of about 10ft with a <strong>peak</strong> period of 15s, which are statistical properties of a wave field. Of course this doesn’t happen often, hence the averages are lower. I should also point out that the photo is a breaking wave, which is larger than the offshore height due to shoaling, but it helps to put things into perspective when we talk about wave power <strong>per metere</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Wave energy (and power) scales with the square of the wave height!</p>
+</div>
 </section>
 <section id="historical-development-of-wave-energy-converters-wecs">
 <h2>Historical Development of Wave Energy Converters (WECs)<a class="headerlink" href="#historical-development-of-wave-energy-converters-wecs" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Early attempts to harness wave energy date back to the 1800s.</p></li>
-<li><p>The modern era of wave energy research began in the 1970s, influenced by the oil crisis.</p></li>
-<li><p>Current focus on commercial-scale WEC development, with strong efforts in Europe.</p></li>
+<li><p>The modern era of wave energy research began in the 1970s, influenced by the oil crisis.</p>
+<ul>
+<li><p>Stephen Salter: “Salter’s Duck”…</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/salters_duck.png"><img alt="../_images/salters_duck.png" src="../_images/salters_duck.png" style="width: 552.8000000000001px; height: 501.6px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Testing of asymetric body (yellow device) in wave flume.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Current focus on commercial-scale WEC development</p>
+<ul>
+<li><p>Strongest efforts in Europe</p></li>
+<li><p>USA has been picking up pace</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="types-of-wave-energy-converters">
 <h2>Types of Wave Energy Converters<a class="headerlink" href="#types-of-wave-energy-converters" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Three main types of WECs: Terminators, Attenuators, and Point Absorbers.</p></li>
+<li><p>Different ways to categorize, but in general categories are quite limited</p></li>
+<li><p>For eample, three main types of WECs:</p>
+<ol class="arabic simple">
 <li><p>Terminators: devices with large horizontal extensions parallel to wave propagation.</p></li>
-<li><p>Attenuators: devices perpendicular to wave propagation.</p></li>
-<li><p>Point absorbers: devices with small extensions compared to the wavelength.</p></li>
+<li><p>Attenuators: devices perpendicular to wave propagation</p></li>
+<li><p>Point Absorbers: devices with small extensions compared to the wavelength.</p></li>
+</ol>
+</li>
 </ul>
-</section>
-<section id="locations-of-wec-deployment">
-<h2>Locations of WEC Deployment<a class="headerlink" href="#locations-of-wec-deployment" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/waves_offshore.png"><img alt="../_images/waves_offshore.png" src="../_images/waves_offshore.png" style="width: 663.2px; height: 378.40000000000003px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Categorization of WECs</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
+<li><p>Within these three categories, what are the main features?</p></li>
+<li><p>Other categorizations include</p>
+<ul>
+<li><p>location</p>
+<ul>
 <li><p>Onshore WECs: fixed to the coast (e.g., oscillating water columns).</p></li>
 <li><p>Near-shore WECs: installed in shallow waters, often bottom-mounted.</p></li>
 <li><p>Offshore WECs: floating devices in deep waters, where waves are not influenced by the seabed.</p></li>
 </ul>
-</section>
-<section id="power-take-off-pto-systems-in-wecs">
-<h2>Power Take-Off (PTO) Systems in WECs<a class="headerlink" href="#power-take-off-pto-systems-in-wecs" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Different PTO systems convert wave energy into electricity: hydraulic, mechanical, and direct drive.</p></li>
-<li><p>Importance of efficiency in PTO systems for overall performance.</p></li>
-<li><p>Advanced control strategies can enhance power production but add complexity.</p></li>
+</li>
+<li><p>working principles, for example…</p></li>
 </ul>
-</section>
-<section id="examples-of-various-wec-types">
-<h2>Examples of Various WEC Types<a class="headerlink" href="#examples-of-various-wec-types" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Overview of prominent WEC technologies (e.g., Pelamis, Crestwing, and Wavebob).</p></li>
-<li><p>Description of each WEC’s working principle (e.g., wave-activated bodies, oscillating water columns).</p></li>
-<li><p>Technologies span both floating and fixed devices.</p></li>
+</li>
 </ul>
-</section>
-<section id="multi-body-wec-systems">
-<h2>Multi-body WEC Systems<a class="headerlink" href="#multi-body-wec-systems" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Examples of multi-body WECs: Wavestar and Floating Power Plant.</p></li>
-<li><p>WECs that use multiple floats or absorbers to capture wave energy more efficiently.</p></li>
-<li><p>Challenges and benefits of multi-body systems: increased efficiency but greater complexity.</p></li>
-</ul>
-</section>
-<section id="overtopping-wecs">
-<h2>Overtopping WECs<a class="headerlink" href="#overtopping-wecs" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Overtopping devices like the Wave Dragon use ramp structures to capture water from waves.</p></li>
-<li><p>Captured water flows back into the ocean through turbines, generating electricity.</p></li>
-<li><p>These devices often include additional structures to focus and amplify wave energy.</p></li>
-</ul>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/OWC.png"><img alt="../_images/OWC.png" src="../_images/OWC.png" style="width: 576.6px; height: 379.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Oscillating Water Column (OWC)</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../_images/OWC2.png"><img alt="../_images/OWC2.png" src="../_images/OWC2.png" style="width: 411.20000000000005px; height: 295.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">OWC principles</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../_images/Pelamis.png"><img alt="../_images/Pelamis.png" src="../_images/Pelamis.png" style="width: 796.8000000000001px; height: 418.40000000000003px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Pelamis attenuator</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../_images/Ceto_buoy.png"><img alt="../_images/Ceto_buoy.png" src="../_images/Ceto_buoy.png" style="width: 508.0px; height: 712.8000000000001px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Carnegie CETO buoy</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../_images/Langlee_flap.png"><img alt="../_images/Langlee_flap.png" src="../_images/Langlee_flap.png" style="width: 692.0px; height: 512.8000000000001px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Langlee dual pitching flap</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<a class="reference internal image-reference" href="../_images/wave_dragon.png"><img alt="../_images/wave_dragon.png" src="../_images/wave_dragon.png" style="width: 819.2px; height: 403.20000000000005px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Wave Dragon overtopping</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<a class="reference internal image-reference" href="../_images/Wavestar.png"><img alt="../_images/Wavestar.png" src="../_images/Wavestar.png" style="width: 424.0px; height: 301.6px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Wavestar multibody</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a <strong>VERY</strong> small subset of examples and there is no silver bullet in design. Alot is dependent upon location, resources, etc.</p>
+</div>
 </section>
 <section id="testing-and-development-of-wec-prototypes">
 <h2>Testing and Development of WEC Prototypes<a class="headerlink" href="#testing-and-development-of-wec-prototypes" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="id14">
+<a class="reference internal image-reference" href="../_images/dev_diagram.png"><img alt="../_images/dev_diagram.png" src="../_images/dev_diagram.png" style="width: 882.4000000000001px; height: 694.4000000000001px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Conceptual develpment flow diagram</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
-<li><p>The staged development process for WECs: from concept to commercial product.</p></li>
-<li><p>Real-sea testing is crucial for proving the feasibility and durability of WECs.</p></li>
-<li><p>European Marine Energy Center (EMEC) as a key facility for testing wave energy technologies.</p></li>
+<li><p>Technology Readiness Level (TRL): metric used in development process</p>
+<ul>
+<li><p>TRL 1-3: “stage 1: concept”</p></li>
+<li><p>TRL 4: “stage 2: design”</p></li>
+<li><p>TRL 5-6: “stage 3: systems”</p></li>
+<li><p>TRL 7-8: “stage 4: device”</p></li>
+<li><p>TRL 9: “stage 5: economics”</p></li>
 </ul>
-</section>
-<section id="future-prospects-for-wave-energy">
-<h2>Future Prospects for Wave Energy<a class="headerlink" href="#future-prospects-for-wave-energy" title="Link to this heading">#</a></h2>
+</li>
+<li><p>In USA, we’re largely in stages 3-4 range, with a few devices exploring commercial activity</p>
+<ul>
+<li><p>Here in Hawaii, we’re still largely in stages 1-2, with a few efforts pushing into stage 3</p></li>
+</ul>
+</li>
+<li><p>Real-sea testing is crucial for proving the feasibility and durability of WECs</p>
+<ul>
+<li><p>Devices are built/tuned to site characteristics</p></li>
+<li><p>Europe is littered with test sites</p></li>
+</ul>
+</li>
+</ul>
+<figure class="align-center" id="id15">
+<a class="reference internal image-reference" href="../_images/testsites_europe.png"><img alt="../_images/testsites_europe.png" src="../_images/testsites_europe.png" style="width: 760.0px; height: 442.40000000000003px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Distribution of wave energy test sites in Europe</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
-<li><p>Continued development of WECs through research, optimization, and scaling.</p></li>
-<li><p>The role of wave energy in complementing other renewables, especially in regions with strong wave resources.</p></li>
-<li><p>International collaboration and policy support as key to advancing the wave energy sector.</p></li>
+<li><p>USA, hardly any test sites, BUT…</p>
+<ul>
+<li><p>Hawaii hosts one of the few: <a class="reference external" href="https://tethys.pnnl.gov/project-sites/us-navy-wave-energy-test-site-wets">WETS</a>, with more hopefully to come online soon</p></li>
 </ul>
+</li>
+</ul>
+<figure class="align-center" id="id16">
+<a class="reference internal image-reference" href="../_images/wets.png"><img alt="../_images/wets.png" src="../_images/wets.png" style="width: 592.0px; height: 311.20000000000005px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Hawaii Wave Energy Test Site (WETS)</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The video highlight clip below showcases some of the WEC deployments at WETS, with emphasis on the <a class="reference external" href="https://azurawave.com/">Azura</a> device. The site is still actively maintained by <a class="reference external" href="https://www.hnei.hawaii.edu/research/ocean-energy/">HNEI’s Ocean Energy group</a> under the supervision of the US Navy, with devices being tested from around the world.
+<video controls muted="true" loop="true" width="600" style="display: block; margin: 0 auto;">
+<source src="../_static/videos/WETS_presentation.mp4" type="video/mp4">
+</video></p>
 </section>
-<section id="summary-and-conclusions">
-<h2>Summary and Conclusions<a class="headerlink" href="#summary-and-conclusions" title="Link to this heading">#</a></h2>
+<section id="summary-future-outlook-and-conclusions">
+<h2>Summary, Future Outlook, and Conclusions<a class="headerlink" href="#summary-future-outlook-and-conclusions" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Wave energy holds significant promise as part of the global renewable energy portfolio.</p></li>
+<li><p>International collaboration and policy support as key to advancing the wave energy sector.</p></li>
 <li><p>Challenges remain in terms of cost reduction and technical feasibility.</p></li>
+<li><p>Continued development of WECs through research, optimization, and scaling.</p></li>
 <li><p>With continued R&amp;D, wave energy can play a critical role in a diversified, sustainable energy future.</p></li>
+<li><p>Hawaii Marine Energy Center (HMEC)</p></li>
 </ul>
 </section>
 </section>
@@ -590,20 +782,12 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addressing-environmental-and-economic-concerns">Addressing Environmental and Economic Concerns</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-future-of-energy-systems">The Future of Energy Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-global-potential-of-wave-energy">The Global Potential of Wave Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-and-regional-estimates-of-wave-energy-potential">Global and Regional Estimates of Wave Energy Potential</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-development-of-wave-energy-converters-wecs">Historical Development of Wave Energy Converters (WECs)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-wave-energy-converters">Types of Wave Energy Converters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#locations-of-wec-deployment">Locations of WEC Deployment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-take-off-pto-systems-in-wecs">Power Take-Off (PTO) Systems in WECs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-various-wec-types">Examples of Various WEC Types</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-body-wec-systems">Multi-body WEC Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overtopping-wecs">Overtopping WECs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-and-development-of-wec-prototypes">Testing and Development of WEC Prototypes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-prospects-for-wave-energy">Future Prospects for Wave Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-conclusions">Summary and Conclusions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-future-outlook-and-conclusions">Summary, Future Outlook, and Conclusions</a></li>
 </ul>
   </nav></div>
 
